@@ -3,6 +3,9 @@
 int main(void)
 {
     int choice;
+    int a;
+    int b;
+    int result;
 
     printf("Simple Calculator\n");
 
@@ -23,7 +26,19 @@ int main(void)
         {
             printf("Bye!\n");
         }
-        else if (choice >= 1 && choice <= 4)
+	if (choice == 1)
+	{
+		printf("A: ");
+		scanf("%d", &a);
+
+		printf("B: ");
+		scanf("%d", &b);
+
+		result = a + b;
+
+		printf("Result: %d\n", result);
+	}
+        else if (choice >= 2 && choice <= 4)
         {
             printf("You selected option %d\n", choice);
         }

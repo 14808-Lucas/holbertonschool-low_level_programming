@@ -38,7 +38,19 @@ int main(void)
 
 		printf("Result: %d\n", result);
 	}
-        else if (choice >= 2 && choice <= 4)
+	else if (choice == 2)
+	{
+		printf("A: ");
+		scanf("%d", &a);
+
+		printf("B ");
+		scanf("%d", &b);
+
+		result = a - b;
+
+		printf("Result: %d\n", result);
+	}
+        else if (choice >= 3 && choice <= 4)
         {
             printf("You selected option %d\n", choice);
         }

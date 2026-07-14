@@ -8,6 +8,8 @@ Task 2 - I declared integers, int a,b, and result. put in an "if" loop, if (choi
 
 Task 3 - did the same as above but for subtraction. adjust else if choice 3-4 as they are not currently in use.\
 
-Task 4 - did the same program as above but adjusted result = a * b to represent multiplication of held values.  
+Task 4 - did the same program as above but adjusted result = a * b to represent multiplication of held values.
+
+Task 5 - Was hard.. I had to use a float integer. so i declared float divisionResult;  both a and b are integers and they store whole numbers instead of decimals. while a float can store decimals. if i divided a / b with just %d it would print as 2 and not 2.5. float changes an int to a float which holds a value of 10.0 for example instead of just 10. to print the float value we have to use printf("%f\n". which prints out a decimal number. you can adjust the decimal to one digit if you but a "1" before the f. by declaring float and when we divide our a / b with it we get a decimal printed out.  
 
 

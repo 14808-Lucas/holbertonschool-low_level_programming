@@ -1,28 +1,6 @@
 #include "main.h"
 
 /**
- * free_grid - frees a partially or fully allocated grid
- * @grid: the array of row pointers
- * @allocated_rows: the number of rows that were successfully allocated
- *
- * Return: void
- */
-void free_grid(int **grid, int allocated_rows)
-{
-	int h;
-
-	h = 0;
-
-	while (h < allocated_rows)
-	{
-		free(grid[h]);
-		h++;
-	}
-
-	free(grid);
-}
-
-/**
  * alloc_grid - returns a pointer to a 2D array of integers, initialized to 0
  * @width: the width of the grid
  * @height: the height of the grid

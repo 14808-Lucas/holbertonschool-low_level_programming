@@ -1,27 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen_safe - returns the length of a string, or 0 if NULL
- * @s: the string to measure
- *
- * Return: the length of the string, or 0 if s is NULL
- */
-int _strlen_safe(char *s)
-{
-	int len;
-
-	if (s == NULL)
-		return (0);
-
-	len = 0;
-
-	while (s[len] != '\0')
-		len++;
-
-	return (len);
-}
-
-/**
  * str_concat - concatenates two strings into newly allocated memory
  * @s1: the first string (NULL treated as empty)
  * @s2: the second string (NULL treated as empty)
@@ -32,10 +11,24 @@ int _strlen_safe(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *result;
-	int len1, len2, i, j;
+	int len1;
+	int len2;
+	int i;
+	int j;
 
-	len1 = _strlen_safe(s1);
-	len2 = _strlen_safe(s2);
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	len1 = 0;
+	while (s1[len1] != '\0')
+		len1++;
+
+	len2 = 0;
+	while (s2[len2] != '\0')
+		len2++;
 
 	result = malloc(sizeof(char) * (len1 + len2 + 1));
 
@@ -43,7 +36,6 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	i = 0;
-
 	while (i < len1)
 	{
 		result[i] = s1[i];
@@ -51,7 +43,6 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	j = 0;
-
 	while (j < len2)
 	{
 		result[i] = s2[j];

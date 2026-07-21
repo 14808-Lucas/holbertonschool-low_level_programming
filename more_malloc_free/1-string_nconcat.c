@@ -1,6 +1,24 @@
 #include "main.h"
 
 /**
+ * str_length - returns the length of a string
+ * @s: the string to measure
+ *
+ * Return: the length of the string
+ */
+unsigned int str_length(char *s)
+{
+	unsigned int len;
+
+	len = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	return (len);
+}
+
+/**
  * string_nconcat - concatenates s1 with up to n bytes of s2
  * @s1: the first string (NULL treated as empty)
  * @s2: the second string (NULL treated as empty)
@@ -23,13 +41,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	len1 = 0;
-	while (s1[len1] != '\0')
-		len1++;
-
-	len2 = 0;
-	while (s2[len2] != '\0')
-		len2++;
+	len1 = str_length(s1);
+	len2 = str_length(s2);
 
 	if (n > len2)
 		n = len2;

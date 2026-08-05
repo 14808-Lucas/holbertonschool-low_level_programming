@@ -36,4 +36,4 @@ Line 1: I used grep -n "user_pin" source.c to find the lines user pin was used b
 
 line 2 : I used grep -n "return x;" and found lines 22 & 88. we used 88 as it is inside the derive key. we put the break at line 88 and ran the program using 123456. it stopped at the break point and we were able to get the value of x by p "0x%08X\n", x. 0x449BC842
 
-line 3 : I used list compute target to find the function in the program because i needed to find the exact line for the end iteration of i == 0. which was line 105                     acc += 0x7F4A7C15u; . i ran the program to check it stops on that line and printed the address 0xE628DE91
+line 3 : I used list compute target to find the function in the program because i needed to find the exact line for the end iteration of i == 0. which was line 105                     acc += 0x7F4A7C15u; . i ran the program to check it stops on that line and printed the address 0x65735AA6

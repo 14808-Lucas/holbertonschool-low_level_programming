@@ -34,3 +34,4 @@ The following files are included in this project:
 
 Line 1: I used grep -n "user_pin" source.c to find the lines user pin was used before G_state. i determeined it was line 83. I then set the breakpoint at 83 and ran the program using 123456. It stopped at the breakpoint confirming the address of the issue. I then used pprint 0r p  printf "0x%08X\n", x and it came out with 0xF2EF340B
 
+line 2 : I used grep -n "return x;" and found lines 22 & 88. we used 88 as it is inside the derive key. we put the break at line 88 and ran the program using 123456. it stopped at the break point and we were able to get the value of x by p "0x%08X\n", x. 0x449BC842

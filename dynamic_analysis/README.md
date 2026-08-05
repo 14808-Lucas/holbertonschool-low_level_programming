@@ -42,3 +42,4 @@ Visual Coder task :
 
 Line 1 TGT &1u . In Visual coder i looked inside the function validate and found the line needed at 118. i put a breakpoint there and ran the program. it stopped on the correct line and visual coder gives you the locals variables k, tgt and user pin. we just needed tgt vs code can give you the hexidecimal number with one button but you can also put int he debug console -exec printf "0x%08X\n", tgt . which is communicating with gdb and gives us our answer of 0x6366889B
 
+Line 2 TGT post branch : stil in Validate function just below tgt & 1u we want to put a break at line 125 because TGT gets update in the if/else branch so we put the break on mask so it has an update value but before mask and sig is computed. finall result is 0xA7C1C047

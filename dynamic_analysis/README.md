@@ -30,8 +30,7 @@ The following files are included in this project:
 | File           | Description |
 |--------- |-------------|
 |                    |                        |
-|                   |                         |
-|                   |                        |
-|                   |                        |
-|                   |                        |
+
+
+Line 1: I used grep -n "user_pin" source.c to find the lines user pin was used before G_state. i determeined it was line 83. I then set the breakpoint at 83 and ran the program using 123456. It stopped at the breakpoint confirming the address of the issue. I then used pprint 0r p  printf "0x%08X\n", x and it came out with 0xF2EF340B
 
